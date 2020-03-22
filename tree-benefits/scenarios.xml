@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenarios>
+    <scenario>
+        <title>Medium-size tree replaced with similar trees</title>
+        <description/>
+        <DBH>40</DBH>
+        <RR>4.5</RR>
+        <AM>60</AM>
+        <CP>100</CP>
+        <HL>200</HL>
+        <A>-2.1</A>
+        <B>2.369</B>
+        <Decay>1</Decay>
+        <AP>6</AP>
+        <PD>1</PD>
+        <EY>3</EY>
+        <BTRS/>
+        <Samespecies/>
+    </scenario>
+    <scenario>
+        <title>Large tree replaced by Rowan trees</title>
+        <description/>
+        <DBH>60</DBH>
+        <RR>4.5</RR>
+        <AM>100</AM>
+        <HL>400</HL>
+        <A>-2.1</A>
+        <B>2.369</B>
+        <Decay>1</Decay>
+        <RepRR>5.5</RepRR>
+        <RepAM>50</RepAM>
+        <RepHL>120</RepHL>
+        <RepA>-2.1</RepA>
+        <RepB>2.369</RepB>
+        <AP>6</AP>
+        <PD>1</PD>
+        <EY>3</EY>
+        <BTRS/>
+    </scenario>
+</scenarios>
