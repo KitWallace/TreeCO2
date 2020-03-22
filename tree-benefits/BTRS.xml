@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BTRS>
+    <band lower="0" upper="15" trees="0"/>
+    <band lower="15" upper="20" trees="1"/>
+    <band lower="20" upper="30" trees="2"/>
+    <band lower="30" upper="40" trees="3"/>
+    <band lower="40" upper="50" trees="4"/>
+    <band lower="50" upper="60" trees="5"/>
+    <band lower="60" upper="70" trees="6"/>
+    <band lower="70" upper="80" trees="7"/>
+    <band lower="80" upper="9999" trees="8"/>
+</BTRS>
