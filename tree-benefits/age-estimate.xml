@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ages>
+    <sites>
+        <site>
+            <name>Urban site</name>
+            <description>Based on data from Monteiro et al(2017). These are the values for Cardiff</description>
+        </site>
+        <site>
+            <name>Champion</name>
+            <description>Champion tree potential - ideal site conditions</description>
+        </site>
+        <site>
+            <name>Good site</name>
+            <description>Good site, open growth, sheltered</description>
+        </site>
+        <site>
+            <name>Average site</name>
+            <description>Average site - garden, parkland</description>
+        </site>
+        <site>
+            <name>Churchyard</name>
+            <description>Churchyard</description>
+        </site>
+        <site>
+            <name>Poor site</name>
+            <description>Poor ground and/or some exposure</description>
+        </site>
+        <site>
+            <name>Woodland</name>
+            <description>Woodland - boundary pollard or open woodland</description>
+        </site>
+        <site>
+            <name>Inside Woodland</name>
+            <description>Inside Woodland</description>
+        </site>
+    </sites>
+    <species>
+        <common>Common oak</common>
+        <latin>Quercus robur</latin>
+        <rate>
+            <site>Urban site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5.3</ring-width>
+        </rate>
+        <rate>
+            <site>Champion</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>100</age-at-maturity>
+            <ring-width>3.5</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>120</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+        <rate>
+            <site>Woodland</site>
+            <age-at-maturity>100</age-at-maturity>
+            <ring-width>3.5</ring-width>
+        </rate>
+        <rate>
+            <site>Inside Woodland</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>2.5</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Turkey Oak</common>
+        <latin>Quercus cerris</latin>
+        <rate>
+            <site>Champion</site>
+            <age-at-maturity>30</age-at-maturity>
+            <ring-width>10</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>40</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Churchyard</site>
+            <age-at-maturity>40</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Red Oak</common>
+        <latin>Quercus rubra</latin>
+        <rate>
+            <site>Champion</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Beech</common>
+        <latin>Fagus sylvatica</latin>
+        <rate>
+            <site>Champion</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Churchyard</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Inside Woodland</site>
+            <age-at-maturity>120</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Sweet Chestnut</common>
+        <latin>Castanea sativa</latin>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>40</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Inside Woodland</site>
+            <age-at-maturity>100</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Walnut</common>
+        <latin>Juglans regia</latin>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>55</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Churchyard</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Black Mulbery</common>
+        <latin>Morus nigra</latin>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>40</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>30</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Ash</common>
+        <latin>Fraxinus excelsior</latin>
+        <rate>
+            <site>Urban site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Woodland</site>
+            <age-at-maturity>20</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Inside Woodland</site>
+            <age-at-maturity>100</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Common Lime</common>
+        <latin>Tilia x europaea</latin>
+        <rate>
+            <site>Champion</site>
+            <age-at-maturity>100</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Churchyard</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Horse Chestnut</common>
+        <latin>Aesculus hippocastanum</latin>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>40</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Churchyard</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>London Plane</common>
+        <latin>Platanus x acerifolia</latin>
+        <rate>
+            <site>Champion</site>
+            <age-at-maturity>100</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Churchyard</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Yew</common>
+        <latin>Taxus baccata</latin>
+        <note/>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Churchyard</site>
+            <age-at-maturity>55</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>40</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+        <rate>
+            <site>Inside Woodland</site>
+            <age-at-maturity>30</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Robinia</common>
+        <latin>Robinia pseudoacacia</latin>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Churchyard</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+    </species>
+    <species>
+        <latin>Araucaria araucaria</latin>
+        <common>Monkey Puzzle Tree</common>
+        <rate>
+            <site>Champion</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>45</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Black Pine</common>
+        <latin>Pinus nigra</latin>
+        <rate>
+            <site>Champion</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Tulip Tree</common>
+        <latin>Liriodendron tulipifera</latin>
+        <rate>
+            <site>Champion</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>7</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Deodar Cedar</common>
+        <latin>Cedrus deodara</latin>
+        <rate>
+            <site>Champion</site>
+            <age-at-maturity>40</age-at-maturity>
+            <ring-width>8</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>7</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>50</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Cedar of Lebanon</common>
+        <latin>Cedrus libani</latin>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Holly</common>
+        <latin>Ilex aquifolium</latin>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>70</age-at-maturity>
+            <ring-width>3.5</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>3</ring-width>
+        </rate>
+        <rate>
+            <site>Inside Woodland</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>4</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Sycamore</common>
+        <latin>Acer pseudoplatanus</latin>
+        <rate>
+            <site>Urban site</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>4.5</ring-width>
+        </rate>
+        <rate>
+            <site>Good site</site>
+            <age-at-maturity>80</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Average site</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Churchyard</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>6</ring-width>
+        </rate>
+        <rate>
+            <site>Poor site</site>
+            <age-at-maturity>60</age-at-maturity>
+            <ring-width>5</ring-width>
+        </rate>
+    </species>
+    <species>
+        <common>Silver Birch - Cardiff</common>
+        <latin>Betula pendula</latin>
+        <rate>
+            <site>Urban site</site>
+            <age-at-maturity>40</age-at-maturity>
+            <ring-width>6.5</ring-width>
+        </rate>
+    </species>
+</ages>
