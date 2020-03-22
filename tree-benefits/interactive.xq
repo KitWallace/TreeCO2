@@ -289,7 +289,7 @@ a number of sources.
  -->
    <hr/>
    <div>A <a target="_blank" class="external" href="https://bristoltrees.space/">Trees of Bristol</a> production for <a target="_blank" href="https://bristoltreeforum.org/">Bristol Tree Forum</a>. 
-   Code (soon) and Issues on <a target="_blank" class="external"  href="https://github.com/KitWallace/TreeCO2">Github</a>. 
+   Code and Issues on <a target="_blank" class="external"  href="https://github.com/KitWallace/TreeCO2">Github</a>. 
     </div>
     <div>20 March 2020</div>
    </div>
