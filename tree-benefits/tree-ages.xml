@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<species>
+    <species>
+        <latin>Malus</latin>
+        <common>Apple</common>
+        <age>80</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Fraxinus</latin>
+        <common>Ash</common>
+        <age>200</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Populus tremula</latin>
+        <common>Aspen</common>
+        <age>100</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Fagus</latin>
+        <common>Beech</common>
+        <age>200</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Alnus glutinosa</latin>
+        <common>Common Alder</common>
+        <age>200</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Tilia x europaea</latin>
+        <common>Common Lime</common>
+        <age>400</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Quercus rubur</latin>
+        <common>English Oak</common>
+        <age>350</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Cedrus libani</latin>
+        <common>Cedar of Lebanon</common>
+        <age>350</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Eucalyptus gunnii</latin>
+        <common>Cider Gum Eucalyptus</common>
+        <age>120</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Salix fragilis</latin>
+        <common>Crack Willow</common>
+        <age>100</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Ulmus</latin>
+        <common>English Elm</common>
+        <age>100</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Larix decidua</latin>
+        <common>European Larch</common>
+        <age>350</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Acer campestre</latin>
+        <common>Field Maple</common>
+        <age>200</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Ginkgo biloba</latin>
+        <common>Ginkgo</common>
+        <age>250</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Corylus avellana</latin>
+        <common>Hazel</common>
+        <age>70</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Ilex aquifolium</latin>
+        <common>Holly</common>
+        <age>120</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Carpinus betulus</latin>
+        <common>Hornbeam</common>
+        <age>300</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Aesculus hippocastanum</latin>
+        <common>Horse Chestnut</common>
+        <age>350</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Catalpa bignoides</latin>
+        <common>Indian Bean Tree</common>
+        <age>150</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Populus nigra ‘Italica’</latin>
+        <common>Lombardy Poplar</common>
+        <age>150</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Platanus x acerifolia</latin>
+        <common>London Plane</common>
+        <age>400</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Pinus pinaster</latin>
+        <common>Maritime Pine</common>
+        <age>180</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Araucaria araucana</latin>
+        <common>Monkey Puzzle</common>
+        <age>150</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Morus nigra</latin>
+        <common>Mulberry</common>
+        <age>150</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Acer platanoides</latin>
+        <common>Norway Maple</common>
+        <age>150</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Picea abies</latin>
+        <common>Norway Spruce</common>
+        <age>200</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Quercus rubra</latin>
+        <common>Red Oak</common>
+        <age>200</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Robinia pseudacacia</latin>
+        <common>Robinia</common>
+        <age>250</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Sorbus aucuparia</latin>
+        <common>Rowan</common>
+        <age>120</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Quercus cocinea</latin>
+        <common>Scarlet Oak</common>
+        <age>150</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Pinus sylvestris</latin>
+        <common>Scots Pine</common>
+        <age>300</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Betula pendula</latin>
+        <common>Silver Birch</common>
+        <age>80</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Acer saccharinum</latin>
+        <common>Silver Maple</common>
+        <age>150</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Castanea sativa</latin>
+        <common>Sweet Chestnut</common>
+        <age>450</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Acer pseudoplatanus</latin>
+        <common>Sycamore</common>
+        <age>220</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Liriodendron tulipifera</latin>
+        <common>Tulip Tree</common>
+        <age>300</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Ailanthus altissima</latin>
+        <common>Tree of Heaven</common>
+        <age>200</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Nyassa sylvatica</latin>
+        <common>Tupelo</common>
+        <age>220</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Juglans regia</latin>
+        <common>Walnut</common>
+        <age>200</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Prunus avium</latin>
+        <common>Wild Cherry</common>
+        <age>150</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Ulmus glabra</latin>
+        <common>Wych Elm</common>
+        <age>250</age>
+        <source>Hellis</source>
+    </species>
+    <species>
+        <latin>Taxus baccata</latin>
+        <common>Yew</common>
+        <age>400</age>
+        <source>Hellis</source>
+    </species>
+</species>
