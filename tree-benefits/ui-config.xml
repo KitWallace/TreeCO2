@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <params>
     <param>
         <group>tree</group>
         <name>DBH</name>
         <id>DBH</id>
-        <title>Diameter at Breast Height measured at 1.4 m above ground.</title>
+        <title>Diameter at Breast Height measured at 1.4 m above the ground.</title>
         <type>slider</type>
         <min>0</min>
         <max>200</max>
@@ -14,8 +13,8 @@
         <group>tree</group>
         <name>Ring radius/year</name>
         <id>RR</id>
-        <title>Ring radius increase per annum :see the table under About for suggested values for
-            different species</title>
+        <title>Ring radius increase per annum - see the table in 'About' for the suggested values 
+        for different species.</title>
         <type>slider</type>
         <min>0</min>
         <max>10</max>
@@ -26,33 +25,37 @@
         <group>tree</group>
         <name>Age at Maturity</name>
         <id>AM</id>
-        <title>Age at Maturity - the end of core growth :see the table under About for suggested
-            values for different species</title>
+        <title>Age at Maturity - the end of core growth - see the table in 'About' for the suggested
+        values for different species.</title>
         <type>slider</type>
         <min>0</min>
         <max>200</max>
-        <default>60</default>
+        <step>10</step>
+        
         <unit>years</unit>
     </param>
     <param>
         <group>tree</group>
         <name>Lifespan</name>
         <id>HL</id>
-        <title>Expected lifespan of tree - see About for suggested values</title>
+        <title>Expected lifespan of tree - see the table in 'About' for the suggested values.</title>
         <type>slider</type>
         <min>0</min>
         <max>400</max>
+        <step>10</step>
+        
         <unit>years</unit>
     </param>
     <param>
         <group>tree</group>
         <name>Canopy %</name>
         <id>CP</id>
-        <title>Tree Canopy damage is often present in established trees and diminishes the tree
-            biomass</title>
+        <title>Tree Canopy damage is often present in established trees and diminishes the tree's biomass.</title>
         <type>slider</type>
         <min>0</min>
         <max>100</max>
+        <step>5</step>
+        
         <unit>%</unit>
     </param>
     <param>
@@ -60,8 +63,8 @@
         <name>DBH-&gt;Biomass:A</name>
         <group>allometric</group>
         <id>A</id>
-        <title>the A cooefficient in the relation of the tree biomass to its diameter: ln(biomass) =
-            A + B ln(DBH) see About for typical values</title>
+        <title>The A coefficient in the relationship of the tree's biomass to its diameter: ln(biomass) =
+        A + B ln(DBH) see About for typical values.</title>
         <type>slider</type>
         <min>-5</min>
         <max>+5</max>
@@ -73,7 +76,7 @@
         <name>DBH-&gt;Biomass:B</name>
         <group>allometric</group>
         <id>B</id>
-        <title>the B cooefficient in the DBH to Biomass relation </title>
+        <title>The B coefficient in the relationship of the tree's DBH to its Biomass.</title>
         <type>slider</type>
         <min>2</min>
         <max>3</max>
@@ -84,8 +87,8 @@
         <group>tree</group>
         <name>Decay years</name>
         <id>Decay</id>
-        <title>Years to decay : 1 indicates that the tree is chipped and burnt; higher figures allow
-            the tree to rot; 0 means that the tree timber is retained and used.</title>
+        <title>Years until decayed: 1 assumes that the tree is chipped and burnt; higher figures assume that
+        the tree decays naturally; 0 assumes that the tree's timber is retained and used.</title>
         <type>slider</type>
         <min>0</min>
         <max>100</max>
@@ -95,7 +98,7 @@
         <group>replacement</group>
         <name>No of Replacements</name>
         <id>NRep</id>
-        <title>If BTRS is selected, this will be determined by that standard. </title>
+        <title>If BTRS is selected, this will be determined by that standard.</title>
         <type>slider</type>
         <min>0</min>
         <max>20</max>
@@ -105,7 +108,7 @@
         <group>replacement</group>
         <name>Ring radius/year</name>
         <id>RepRR</id>
-        <title>Ring radius growth /year of replacments</title>
+        <title>Ring radius growth/year of replacments.</title>
         <type>slider</type>
         <min>0</min>
         <max>10</max>
@@ -116,7 +119,7 @@
         <group>replacement</group>
         <name>Age at maturity</name>
         <id>RepAM</id>
-        <title>Age at maturity of replacements</title>
+        <title>Age at maturity of replacements.</title>
         <type>slider</type>
         <min>0</min>
         <max>200</max>
@@ -126,7 +129,7 @@
         <group>replacement</group>
         <name>Lifespan</name>
         <id>RepHL</id>
-        <title>Expected lifespan of tree</title>
+        <title>Expected lifespan of the tree.</title>
         <type>slider</type>
         <min>0</min>
         <max>400</max>
@@ -136,7 +139,7 @@
         <group>replacement</group>
         <name>Age at Planting</name>
         <id>AP</id>
-        <title>Typically this is tree of about 6 years old</title>
+        <title>Typically, this is a tree of about 6 years old.</title>
         <type>slider</type>
         <min>0</min>
         <max>10</max>
@@ -146,7 +149,7 @@
         <group>replacement</group>
         <name>Planting delay </name>
         <id>PD</id>
-        <title>Replacement tree is typically planted in the next session</title>
+        <title>Replacement tree is typically planted in the next planting season.</title>
         <type>slider</type>
         <min>0</min>
         <max>5</max>
@@ -156,8 +159,8 @@
         <group>replacement</group>
         <id>EY</id>
         <name>Establishment years</name>
-        <title>Newly planted trees take a couple of years to establish the root system before
-            putting on above ground growth.</title>
+        <title>Newly planted trees take about three years to establish the root system before
+        putting on above-ground growth.</title>
         <type>slider</type>
         <min>0</min>
         <max>5</max>
@@ -168,8 +171,8 @@
         <name>DBH-&gt;Biomass:A</name>
         <group>allometric</group>
         <id>RepA</id>
-        <title>The A cooefficient in the relation of the tree biomass to its diameter: ln(biomass) =
-            A + B ln(DBH) see About for typical values</title>
+        <title>The A coefficient in the relationship of the tree's biomass to its diameter: ln(biomass) =
+        A + B ln(DBH) see About for typical values.</title>
         <type>slider</type>
         <min>-5</min>
         <max>+5</max>
@@ -181,7 +184,7 @@
         <name>DBH-&gt;Biomass:B</name>
         <group>allometric</group>
         <id>RepB</id>
-        <title>the B cooeficient in the DBH to Biomass relation </title>
+        <title>The B coefficient in the relationship of the tree's DBH to its Biomass.</title>
         <type>slider</type>
         <min>2</min>
         <max>3</max>
