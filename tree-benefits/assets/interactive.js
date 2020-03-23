@@ -389,7 +389,7 @@ function create_summary(){
 }
 
 function create_table() {
-    var table="<table border='1'>";
+    var table="<table border='1' class='centre'>";
     table += "<tr><th>Year</th><th>DBH</th><th>Biomass</th><th>Tree CO<sup>2</sup><th>Rel Tree CO<sup>2</sup></th><th>Replacement CO<sup>2</sup></th><th>Net CO<sup>2</sup></tr>";
     for (var year =0;year<Years;year++) {
         table+="<tr><td>"+year+"</td><td>"+Model.tree_pts[year].DBH.toFixed(1)+"</td><td>"+Model.tree_pts[year].biomass.toFixed(3)+"</td><td>"+Model.tree_pts[year].CO2.toFixed(3)+"</td><td>"+Model.tree_pts[year].rel_CO2.toFixed(3)+"</td><td>"+Model.rep_pts[year].toFixed(3)+"</td><td>"+Model.benefit_pts[year].toFixed(3)+"</td></tr>";
@@ -498,7 +498,7 @@ function graph_svg(scale_x,scale_y,y_min,y_max) {
    svg += svg_line(0,y_min*scale_y,0, y_max*scale_y,line_style);
    for(y=y_min;y<=y_max;y+=1) {
         svg+=svg_line(0,y*scale_y,-5,y*scale_y,line_style);
-        svg+=svg_text(-15,-y*scale_y,y,text_style);
+        svg+=svg_text(-15 - (y<0?7:0) ,-y*scale_y,y,text_style);
     }  
    return svg; 
 }
@@ -529,7 +529,7 @@ function small_graph_svg(scale_x,scale_y,y_min,y_max) {
    svg += svg_line(0,y_min*scale_y,0, y_max*scale_y,line_style);
    for(y=y_min;y<=y_max;y+=1) {
         svg+=svg_line(0,y*scale_y,-5,y*scale_y,line_style);
-        svg+=svg_text(-15,-y*scale_y,y,text_style);
+        svg+=svg_text(-15 -(y<0?7:0),-y*scale_y,y,text_style);
     }  
    return svg; 
 }
