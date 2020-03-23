@@ -2,12 +2,20 @@ import module namespace tp-benefits = "http://kitwallace.co.uk/lib/tp-benefits" 
 declare variable $local:info-icon := <img src="assets/Info_Symbol.png" width="10px"/>;
 declare option exist:serialize "method=xhtml media-type=text/html";
 
+
+declare function local:tooltip($text) {
+     <span class="tooltip">{$local:info-icon}
+           <span class="tooltiptext">{string($text)}</span>
+     </span>
+};
+
 declare function local:slider-row($param, $i) {
                 <tr>
                     <th width="170pt">
                          <span id="slidername{$i}"><b>{$param/name/string()}</b></span> 
                          {if ($param/title)
-                          then <span title="{$param/title}" style="color:blue" >{$local:info-icon}</span>
+                          then 
+                            local:tooltip($param/title)
                           else "&#160;"
                          }
                     </th>
@@ -31,8 +39,10 @@ return
         <title>Tree CO2</title>
         <script src="https://code.jquery.com/jquery-1.12.4.js"/>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"/>
+        <script src="assets/jquery-touch.js"/>
         <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
         <link rel="stylesheet" type="text/css" href="assets/ui-screen.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="assets/ui-mobile.css" media="mobile"/>
         <link rel="stylesheet" type="text/css"
             href="https://fonts.googleapis.com/css?family=Merriweather%20Sans"/>
         <link rel="stylesheet" type="text/css"
@@ -67,8 +77,8 @@ return
         </script>
         <script type="text/javascript" src='assets/interactive.js'/> 
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link href="/trees/assets/navicon.png" rel="icon" sizes="128x128" />
-        <link rel="shortcut icon" type="image/png" href="assets/favicon-32x32.png"/>
+        <link href="assets/navicon.png" rel="icon" sizes="128x128" />
+        <link rel="shortcut icon" type="image/png" href="assets/navicon.png"/>
     </head>
     <body>
         <div><a target="_blank" href="https://bristoltreeforum.org/"><img src="assets/BTF128.png" width="40"/></a>
@@ -85,7 +95,7 @@ return
 
         </div>
          <div id="tab0"  class="tab">
-           <div style="width:40%">This calculator predicts the impact on CO<sup>2</sup> sequestration of felling a mature tree and replacing it with a number of new replacement trees. The <button onClick="tab(0)">Summary</button> page shows a summary of the selected scenario. 
+           <div style="width:40%;padding-top:12pt;">This calculator predicts the impact on CO<sup>2</sup> sequestration of felling a mature tree and replacing it with a number of new replacement trees. The <button onClick="tab(0)">Summary</button> page shows a summary of the selected scenario. 
            The <button onClick="tab(1)">Details</button> page shows full data and allows you to adjust the parameters of the model used in the prediction. The <button onClick="tab(1)">About</button> page explains the modeling and terms used.
            </div>
 
@@ -97,14 +107,14 @@ return
              </ul>
              <h4>Summary   <button onClick="tab(1)">Details</button></h4>
               <table id="summary">
-              <tr><th title="Diameter at Breast Height measured at 1.4 m above ground.">Tree DBH {$local:info-icon}</th><td><input type="text" id="summary-DBH" value="40" size="2" onChange="summary_refresh()"/><button id="refresh-summary" onClick="summary_refresh()">Change</button></td></tr>
-              <tr><th title="Calculated from the estimated size of annual growth rings - see About">Tree age{$local:info-icon}</th><td id="summary-age"/></tr>
-              <tr><th title="In Bristol, the number of replacement trees is determined by the Bristol Tree Replacement Policy - see About">Number of replacements{$local:info-icon}</th><td><input type="checkbox" id="summary_use_BTRS" checked="checked" onchange="summary_refresh()" ><span title="In Bristol, the number of replacement trees is determined by the Bristol Tree Replacement Policy - see About" >Use BTRS {$local:info-icon}</span></input><input type="text" id="summary-NRep"  size="2"/><button id="refresh-summary" onClick="summary_refresh()">Change</button></td></tr>
-              <tr><th title="The number of replacement trees can be calculated so that the breakeven year i">Target Breakeven Year{$local:info-icon}</th><td><input type="text" id="target-year" value="30" size="2" onChange="solve_breakeven()"/> <button id="solve_breakeven" onClick="solve_breakeven()">Compute No. of replacements needed.</button></td></tr>
-              <tr><th title="The year when the replacement trees balance the loss of the original tree">Breakeven year{$local:info-icon}</th><td id="breakeven"/></tr>  
-              <tr><th title="The CO2 captured by the lost tree and returned to the atmosphere after felling">Net CO<sup>2</sup> after felling {$local:info-icon}</th><td id="tree-CO2"/></tr>
-              <tr><th title="Bristol aims to be Carbon neutral by 2030">Net CO<sup>2</sup> in 2030{$local:info-icon}</th><td id="CO2-2030"/></tr>
-              <tr><th title="UK aims to be Carbon neutral by 2050">Net CO<sup>2</sup> in 2050{$local:info-icon}</th><td id="CO2-2050"/></tr>
+              <tr><th>Tree DBH {local:tooltip("Diameter at Breast Height measured at 1.4 m above ground.")}</th><td><input type="text" id="summary-DBH" value="40" size="2" onChange="summary_refresh()"/><button id="refresh-summary" onClick="summary_refresh()">Change</button></td></tr>
+              <tr><th>Tree age{local:tooltip("Calculated from the estimated size of annual growth rings - see About")}</th><td id="summary-age"/></tr>
+              <tr><th>Number of replacements{local:tooltip("In Bristol, the number of replacement trees is determined by the Bristol Tree Replacement Policy - see About")}</th><td><input type="checkbox" id="summary_use_BTRS" checked="checked" onchange="summary_refresh()" ><span title="In Bristol, the number of replacement trees is determined by the Bristol Tree Replacement Policy - see About" >Use BTRS {$local:info-icon}</span></input><input type="text" id="summary-NRep"  size="2"/><button id="refresh-summary" onClick="summary_refresh()">Change</button></td></tr>
+              <tr><th>Target Breakeven Year{local:tooltip("The number of replacement trees can be calculated so that the breakeven year is less than or equal to the target year")}</th><td><input type="text" id="target-year" value="30" size="2" onChange="solve_breakeven()"/> <button id="solve_breakeven" onClick="solve_breakeven()">Compute No. of replacements needed.</button></td></tr>
+              <tr><th>Breakeven year{local:tooltip("The year when the replacement trees balance the loss of the original tree")}</th><td id="breakeven"/></tr>  
+              <tr><th>Net CO<sup>2</sup> after felling {local:tooltip("The CO2 captured by the lost tree and returned to the atmosphere after felling")}</th><td id="tree-CO2"/></tr>
+              <tr><th>Net CO<sup>2</sup> in 2030{local:tooltip("Bristol aims to be Carbon neutral by 2030")}</th><td id="CO2-2030"/></tr>
+              <tr><th>Net CO<sup>2</sup> in 2050{local:tooltip("UK aims to be Carbon neutral by 2050")}</th><td id="CO2-2050"/></tr>
                </table>
          <div style="page-break-before: always; position:absolute; left:45%; top:0;">
                 <h3 style="text-align:center">Tonnes CO<sup>2</sup> by year</h3>
