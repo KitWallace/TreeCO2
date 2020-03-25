@@ -312,6 +312,14 @@ function benefit_data(tree_data,replacement_data,decay_data){
    return bp;  
 }
 
+function heat_increase() {
+  var heat=0;
+  var end = Model.breakeven == -1 ? Years : Model.breakeven;
+  for (year = 0;year <end; year++)  
+     heat += Model.benefit_pts[year];
+  return - heat; 
+}
+
 function compute_model() {
    Model={};
    Years  = parseFloat($("#Years").val())+5;
@@ -336,8 +344,10 @@ function compute_model() {
    Model.benefit_pts = benefit_data(select_sequence(Model.tree_pts,"rel_CO2"),Model.rep_pts,Model.decay_pts);
     
    Model.breakeven = zero_point(Model.benefit_pts);
-
-// console.log(Model);   
+   
+   Model.heat = heat_increase();
+   
+//   console.log(Model);   
 }
 
 function solve_breakeven () {
@@ -360,11 +370,9 @@ function solve_breakeven () {
     create_summary()
     create_graph();  
     create_small_graph();
-
 }
 
 function create_summary(){
-
    var current_year = new Date().getFullYear();
    var net_2030 =Model.benefit_pts[2030-current_year];
    var net_2050 =Model.benefit_pts[2050-current_year];
@@ -374,12 +382,13 @@ function create_summary(){
    $('#summary-age').html("<span>"+Math.round(Model.age)+"</span>");
    $('#summary-NRep').val(Model.NRep);
    $('#summary_use_BTRS').prop('checked',$('#use_BTRS').prop('checked'));
-   
+  
 //   $('#summary-replacements').html("<span>"+Model.NRep +" trees " + (is_BTRS() ? " following BTRS guidelines" : "")+"</span>");
 //   $('#tree-biomass').html("<span>"+Model.tree_pts[0].biomass.toFixed(3)+" tonnes</span>");
    $('#tree-CO2').html("<span style='color:red'>"+( -Model.base_CO2.toFixed(3))+" tonnes</span>");
    $('#CO2-2030').html("<span style='color:"+color_2030+"'>"+net_2030.toFixed(3)+" tonnes</span>");
    $('#CO2-2050').html("<span style='color:"+color_2050+"'>"+net_2050.toFixed(3)+" tonnes</span>");
+   $('#heat-increase').html("<span style='color:red'>"+Math.round(Model.heat)+" tonne-years</span>");
 //  $('#cavat_value').html("<span> £"+format_number(Model.cavat)+"</span>");
 //  $('#tree-CO2-value').html("<span> £" + Model.base_CO2_value.toFixed(2)+"</span>");
    breakeven_text = Model.breakeven == -1 ? " beyond " + Years + " years"
@@ -391,8 +400,9 @@ function create_summary(){
 function create_table() {
     var table="<table border='1' class='centre'>";
     table += "<tr><th>Year</th><th>DBH</th><th>Biomass</th><th>Tree CO<sup>2</sup><th>Rel Tree CO<sup>2</sup></th><th>Replacement CO<sup>2</sup></th><th>Net CO<sup>2</sup></tr>";
-    for (var year =0;year<Years;year++) {
-        table+="<tr><td>"+year+"</td><td>"+Model.tree_pts[year].DBH.toFixed(1)+"</td><td>"+Model.tree_pts[year].biomass.toFixed(3)+"</td><td>"+Model.tree_pts[year].CO2.toFixed(3)+"</td><td>"+Model.tree_pts[year].rel_CO2.toFixed(3)+"</td><td>"+Model.rep_pts[year].toFixed(3)+"</td><td>"+Model.benefit_pts[year].toFixed(3)+"</td></tr>";
+    for (var year =0;year<Years;year++) {  
+        var sign = Model.benefit_pts[year] > 0 ? 'positive' : 'negative';
+        table+="<tr><td>"+year+"</td><td>"+Model.tree_pts[year].DBH.toFixed(1)+"</td><td>"+Model.tree_pts[year].biomass.toFixed(3)+"</td><td>"+Model.tree_pts[year].CO2.toFixed(3)+"</td><td>"+Model.tree_pts[year].rel_CO2.toFixed(3)+"</td><td>"+Model.rep_pts[year].toFixed(3)+"</td><td class='"+sign+"'>"+Model.benefit_pts[year].toFixed(3)+"</td></tr>";
     };
     table +="</table>";
     $('#raw-data').html(table);
