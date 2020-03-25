@@ -108,13 +108,14 @@ return
              <h4>Summary   <button onClick="tab(1)">Details</button></h4>
               <table id="summary">
               <tr><th>Tree DBH {local:tooltip("Diameter at Breast Height measured at 1.4 m above ground.")}</th><td><input type="text" id="summary-DBH" value="40" size="2" onChange="summary_refresh()"/><button id="refresh-summary" onClick="summary_refresh()">Change</button></td></tr>
-              <tr><th>Tree age{local:tooltip("Calculated from the estimated size of annual growth rings - see About")}</th><td id="summary-age"/></tr>
-              <tr><th>Number of replacements{local:tooltip("In Bristol, the number of replacement trees is determined by the Bristol Tree Replacement Policy - see About")}</th><td><input type="checkbox" id="summary_use_BTRS" checked="checked" onchange="summary_refresh()" ><span title="In Bristol, the number of replacement trees is determined by the Bristol Tree Replacement Policy - see About" >Use BTRS {$local:info-icon}</span></input><input type="text" id="summary-NRep"  size="2"/><button id="refresh-summary" onClick="summary_refresh()">Change</button></td></tr>
-              <tr><th>Target Breakeven Year{local:tooltip("The number of replacement trees can be calculated so that the breakeven year is less than or equal to the target year")}</th><td><input type="text" id="target-year" value="30" size="2" onChange="solve_breakeven()"/> <button id="solve_breakeven" onClick="solve_breakeven()">Compute No. of replacements needed.</button></td></tr>
-              <tr><th>Breakeven year{local:tooltip("The year when the replacement trees balance the loss of the original tree")}</th><td id="breakeven"/></tr>  
-              <tr><th>Net CO<sup>2</sup> after felling {local:tooltip("The CO2 captured by the lost tree and returned to the atmosphere after felling")}</th><td id="tree-CO2"/></tr>
-              <tr><th>Net CO<sup>2</sup> in 2030{local:tooltip("Bristol aims to be Carbon neutral by 2030")}</th><td id="CO2-2030"/></tr>
-              <tr><th>Net CO<sup>2</sup> in 2050{local:tooltip("UK aims to be Carbon neutral by 2050")}</th><td id="CO2-2050"/></tr>
+              <tr><th>Tree age{local:tooltip("Calculated from the estimated size of annual growth rings - see About page.")}</th><td id="summary-age"/></tr>
+              <tr><th>Number of replacements{local:tooltip("In Bristol, the number of replacement trees is determined by the Bristol Tree Replacement Standard - see About page.")}</th><td><input type="checkbox" id="summary_use_BTRS" checked="checked" onchange="summary_refresh()" >Use BTRS {$local:info-icon}</input><input type="text" id="summary-NRep"  size="2"/><button id="refresh-summary" onClick="summary_refresh()">Change</button></td></tr>
+              <tr><th>Target Breakeven Year{local:tooltip("The number of replacement trees can be calculated so that the breakeven year is less than or equal to the target year.")}</th><td><input type="text" id="target-year" value="30" size="2" onChange="solve_breakeven()"/> <button id="solve_breakeven" onClick="solve_breakeven()">Compute No. of replacements needed.</button></td></tr>
+              <tr><th>Breakeven year{local:tooltip("The year when the replacement trees balance the loss of the original tree.")}</th><td id="breakeven"/></tr>  
+              <tr><th>Net CO<sup>2</sup> after felling {local:tooltip("The CO2 captured by the lost tree and returned to the atmosphere after felling.")}</th><td id="tree-CO2"/></tr>
+              <tr><th>Net CO<sup>2</sup> in 2030{local:tooltip("Bristol aims to be Carbon neutral by 2030.")}</th><td id="CO2-2030"/></tr>
+              <tr><th>Net CO<sup>2</sup> in 2050{local:tooltip("UK aims to be Carbon neutral by 2050.")}</th><td id="CO2-2050"/></tr>
+              <tr><th>Heat increase{local:tooltip("Cumulative excess CO2 in atmosphere to breakeven. Expressed in tonne-years until we are able to convert to a more meaningful measure of temperature increase.")}</th><td id="heat-increase"/></tr>
                </table>
          <div style="page-break-before: always; position:absolute; left:45%; top:0;">
                 <h3 style="text-align:center">Tonnes CO<sup>2</sup> by year</h3>
@@ -139,9 +140,9 @@ return
                  return
                     local:slider-row($param, $i)
                 }
-               <tr><td colspan="3" style="font-size:12pt;padding-left:20pt;font-weight:bold">Replacements
-               <input type="checkbox" id="use_BTRS" checked="checked" onchange="refresh()" ><span title="In Bristol, the number of replacement trees is determined by the Bristol Tree Replacement Policy - see About" >Use BTRS {$local:info-icon}</span></input>
-               <input type="checkbox" id="same_species" checked="checked" onchange="refresh()"><span title="If the replacement species are different from the tree species, uncheck this box and set the tree parameters below">Same Species{$local:info-icon}</span></input>
+               <tr><td colspan="3"><span style="font-size:12pt;padding-left:20pt;font-weight:bold">Replacements</span>
+               Use BTRS {local:tooltip("In Bristol, the number of replacement trees is determined by the Bristol Tree Replacement Standard - see About page.")} <input type="checkbox" id="use_BTRS" checked="checked" onchange="refresh()" />
+               Same Species {local:tooltip("If the replacement species are different from the tree species, uncheck this box and set the tree parameters below.")}  <input type="checkbox" id="same_species" checked="checked" onchange="refresh()"/>
                </td></tr>
                  {let $tp := count($ui-configuration/param[group="tree"])
                  for $param at $j in $ui-configuration/param[group="replacement"]
@@ -219,8 +220,8 @@ return
    </table>
    </div>
    <h3>Lifespan</h3>
-   <div>Trees have lifespans which depend on a number of factors: species, situation, climate and diseases.   Data on the expected lifespan of tree species is sparse and for urban trees even sparser.  The table below shows some typical values. 
-   To compute the effect of limited lifespan on both the lost tree and the replacment trees, this age is used to compute the mortality of the tree, based on the assumption that mortality is log-linear and that the lifespan represents the time after which only 10% will be alive. No adjustment is yet made 
+   <div>Trees have lifespans which depend on a number of factors: species, situation, climate and diseases. Data on the expected lifespan of tree species is sparse and for urban trees even sparser. The table below shows some typical values. 
+   To compute the effect of limited lifespan on both the lost tree and the replacement trees, this age is used to compute the mortality of the tree, based on the assumption that mortality is log-linear and that the lifespan represents the time after which only 10% will be alive. No adjustment is yet made 
    location. Mortality of urban trees, especially in the early, vulnerable years is quite high as the <a target="_blank" class="external" href="https://www.fs.fed.us/nrs/pubs/jrnl/2014/nrs_2014_roman_001.pdf">paper by Lara Roman </a> show, where mortality is estimated to be between 3.5 and 5% / annum. 
    </div>
    <h4><button onclick="hide_show('tab-tree-ages')">Lifespan of tree species</button></h4>
@@ -244,8 +245,7 @@ return
    </div>
  
    <h3>DBH to Biomass</h3>
-   <div>DBH to Biomass is computed with the relation ln(Biomass) = a + b* ln(DBH)  with the coefficients taken from 
-a number of sources.  
+   <div>DBH to Biomass is computed with the relation ln(Biomass) = a + b* ln(DBH) with the coefficients taken from a number of sources.  
    </div>
     <h4><button onclick="hide_show('tab-coefficients')">Species coefficients</button></h4>
     <div id="tab-coefficients" style="display:none">
@@ -271,13 +271,13 @@ a number of sources.
    </ul>
     </div>
    <h3>Biomass to CO<sup>2</sup></h3>
-    <div>Carbon is assumed to account for 50% of the mass of the tree although this is an upper limit.  Seqestered Carbon is typically reported in CO<sup>2</sup> equivalent. Using the atomic weights of Carbon (12) and Oxygen(16) the conversion factor from Carbon to CO<sup>2</sup> is 12+2*16 / 12 =3.67.
+    <div>Carbon is assumed to account for 50% of the mass of the tree although this is an upper limit. Seqestered Carbon is typically reported in CO<sup>2</sup> equivalent. Using the atomic weights of Carbon (12) and Oxygen(16) the conversion factor from Carbon to CO<sup>2</sup> is 12+2*16 / 12 =3.67.
    </div>
  
    <h3>Decay of lost tree</h3>
-   <div>The CO<sup>2</sup> released back depends on the method of disposal.  To support the eco-system, it is best that the tree rots in situ although this releases the stored carbon back to the environment, albeit slowly.
+   <div>The CO<sup>2</sup> released back depends on the method of disposal. To support the eco-system, it is best that the tree decays in situ although this releases the stored carbon back to the environment, albeit slowly.
    It is assumed that the tree will decay steadily over 15 years.
-   Better for CO<sup>2</sup> retention would be to convert the tree into timber and use for construction and furniture, although the whole tree cannot be used this way. Timber still decays however.  Softwoods used for paper and cardboard will decay in a few years. If used for fencing and pallets it can be assumed to decay in 10-15 years whereas hardwoods or wood used in construction would last much longer.. If the tree is chipped and used as fuel in a biomass boiler, such as powers the BCC Blaise Nursery, then the whole amount of CO<sup>2</sup> is put back into the atmosphere very quickly. Set the years to 1 to simulate this situation.
+   Much better for CO<sup>2</sup> retention would be to convert the tree into timber and use for construction and furniture, although the whole tree cannot be used this way. Timber still decays however. Softwoods used for paper and cardboard will decay in a few years. If used for fencing and pallets it can be assumed to decay in 10-15 years whereas hardwoods or wood used in construction would last much longer. If the tree is chipped and used as fuel in a biomass boiler, such as powers the BCC Blaise Nursery, then the whole amount of CO<sup>2</sup> is put back into the atmosphere very quickly. Set the years to 1 to simulate this situation.
    </div>
 <!--
 <h3>Monetary benefits</h3>
@@ -301,6 +301,8 @@ a number of sources.
    <div>A <a target="_blank" class="external" href="https://bristoltrees.space/">Trees of Bristol</a> production for <a target="_blank" href="https://bristoltreeforum.org/">Bristol Tree Forum</a>. 
    Code and Issues on <a target="_blank" class="external"  href="https://github.com/KitWallace/TreeCO2">Github</a>. 
     </div>
+   <div>See also a related project to explore the relationship between <a href="dbh-canopy-analysis.xq">DBH and canopy area</a></div>
+
     <div>20 March 2020</div>
    </div>
   </div>
