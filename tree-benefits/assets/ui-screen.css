@@ -78,4 +78,5 @@ table.centre td {text-align:center;}
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+  z-index:99;
 }
