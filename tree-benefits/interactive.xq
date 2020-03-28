@@ -115,8 +115,8 @@ return
               <tr><th>Net CO<sup>2</sup> after felling {local:tooltip("The CO2 captured by the lost tree and returned to the atmosphere after felling.")}</th><td id="tree-CO2"/></tr>
               <tr><th>Net CO<sup>2</sup> in 2030{local:tooltip("Bristol aims to be Carbon neutral by 2030.")}</th><td id="CO2-2030"/></tr>
               <tr><th>Net CO<sup>2</sup> in 2050{local:tooltip("UK aims to be Carbon neutral by 2050.")}</th><td id="CO2-2050"/></tr>
-              <tr><th>Heat increase{local:tooltip("Cumulative excess CO2 in atmosphere to breakeven. Expressed in tonne-years until we are able to convert to a more meaningful measure of temperature increase.")}</th><td id="heat-increase"/></tr>
-               </table>
+<!--              <tr><th>Heat increase{local:tooltip("Cumulative excess CO2 in atmosphere to breakeven. Expressed in tonne-years until we are able to convert to a more meaningful measure of temperature increase.")}</th><td id="heat-increase"/></tr>
+ -->              </table>
          <div style="page-break-before: always; position:absolute; left:45%; top:0;">
                 <h3 style="text-align:center">Tonnes CO<sup>2</sup> by year</h3>
                 <div style="text-align:center">
