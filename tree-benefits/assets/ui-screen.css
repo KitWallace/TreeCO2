@@ -9,6 +9,8 @@ body {
    font-family: 'Merriweather Sans',sans-serif;
 }
 
+div {padding-top:10pt;}
+
 a {text-decoration:none;}
  
 img {padding:5px;}
@@ -24,7 +26,8 @@ a.external {
 .slider {
     background-color: #00ff00;
 }
-
+td.negative {color:red;}
+td.positive {color:green;}
 
 th {font-size: 80%; text-align:right;}
 #summary th {text-align:right; padding-right:10pt;}
@@ -78,5 +81,5 @@ table.centre td {text-align:center;}
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
-  z-index:99;
+  z-index: 99;
 }
