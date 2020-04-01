@@ -82,7 +82,7 @@ return
     </head>
     <body>
         <div><a target="_blank" href="https://bristoltreeforum.org/"><img src="assets/BTF128.png" width="40"/></a>
-        <span style="font-size:20pt;"><a href="?">Tree CO<sup>2</sup></a></span>&#160;
+        <span style="font-size:20pt;"><a href="?">Tree CO<sub>2</sub></a></span>&#160;
             <span>
                 <button  id="but0" onClick="tab(0)">Summary</button>
             </span>&#160;
@@ -95,7 +95,7 @@ return
 
         </div>
          <div id="tab0"  class="tab">
-           <div style="width:40%;padding-top:12pt;">This calculator predicts the impact on CO<sup>2</sup> sequestration of felling a mature tree and replacing it with a number of new replacement trees. The <button onClick="tab(0)">Summary</button> page shows a summary of the selected scenario. 
+           <div style="width:40%;padding-top:12pt;">This calculator predicts the impact on CO<sub>2</sub> sequestration of felling a mature tree and replacing it with a number of new replacement trees. The <button onClick="tab(0)">Summary</button> page shows a summary of the selected scenario. 
            The <button onClick="tab(1)">Details</button> page shows full data and allows you to adjust the parameters of the model used in the prediction. The <button onClick="tab(1)">About</button> page explains the modeling and terms used.
            </div>
 
@@ -112,13 +112,13 @@ return
               <tr><th>Number of replacements{local:tooltip("In Bristol, the number of replacement trees is determined by the Bristol Tree Replacement Standard - see About page.")}</th><td><input type="checkbox" id="summary_use_BTRS" checked="checked" onchange="summary_refresh()" >Use BTRS {$local:info-icon}</input><input type="text" id="summary-NRep"  size="2"/><button id="refresh-summary" onClick="summary_refresh()">Change</button></td></tr>
               <tr><th>Target Breakeven Year{local:tooltip("The number of replacement trees can be calculated so that the breakeven year is less than or equal to the target year.")}</th><td><input type="text" id="target-year" value="30" size="2" onChange="solve_breakeven()"/> <button id="solve_breakeven" onClick="solve_breakeven()">Compute No. of replacements needed.</button></td></tr>
               <tr><th>Breakeven year{local:tooltip("The year when the replacement trees balance the loss of the original tree.")}</th><td id="breakeven"/></tr>  
-              <tr><th>Net CO<sup>2</sup> after felling {local:tooltip("The CO2 captured by the lost tree and returned to the atmosphere after felling.")}</th><td id="tree-CO2"/></tr>
-              <tr><th>Net CO<sup>2</sup> in 2030{local:tooltip("Bristol aims to be Carbon neutral by 2030.")}</th><td id="CO2-2030"/></tr>
-              <tr><th>Net CO<sup>2</sup> in 2050{local:tooltip("UK aims to be Carbon neutral by 2050.")}</th><td id="CO2-2050"/></tr>
+              <tr><th>Net CO<sub>2</sub> after felling {local:tooltip("The CO2 captured by the lost tree and returned to the atmosphere after felling.")}</th><td id="tree-CO2"/></tr>
+              <tr><th>Net CO<sub>2</sub> in 2030{local:tooltip("Bristol aims to be Carbon neutral by 2030.")}</th><td id="CO2-2030"/></tr>
+              <tr><th>Net CO<sub>2</sub> in 2050{local:tooltip("UK aims to be Carbon neutral by 2050.")}</th><td id="CO2-2050"/></tr>
 <!--              <tr><th>Heat increase{local:tooltip("Cumulative excess CO2 in atmosphere to breakeven. Expressed in tonne-years until we are able to convert to a more meaningful measure of temperature increase.")}</th><td id="heat-increase"/></tr>
  -->              </table>
          <div style="page-break-before: always; position:absolute; left:45%; top:0;">
-                <h3 style="text-align:center">Tonnes CO<sup>2</sup> by year</h3>
+                <h3 style="text-align:center">Tonnes CO<sub>2</sub> by year</h3>
                 <div style="text-align:center">
                    <span style="color:red; font-size:larger;font-weight:bold;">Net Loss </span>&#160;  <span style="color:green">Net Gain</span>&#160;             
                 </div>
@@ -158,7 +158,7 @@ return
             </div>
 
              <div style="page-break-before: always; position:absolute; left:45%; top:0;">
-                <h3 style="text-align:center">Tonnes CO<sup>2</sup> by year</h3>
+                <h3 style="text-align:center">Tonnes CO<sub>2</sub> by year</h3>
                 <div style="text-align:center">
                  <span style="color:red;font-size:larger;font-weight:bold;">Net Loss </span>&#160;
                  <span style="color:green">Net Gain </span>&#160;
@@ -179,9 +179,11 @@ return
             <div id="tab2"  class="tab">
           <div>
          <h2>About</h2>
+         <div>Please see the blog post on <a href="https://bristoltreeforum.org/2020/03/31/tree-replacement-and-carbon-neutrality/">Bristol Tree Forum</a> for background and an overview of the calculator.</div>
   <div>This model predicts the impact of felling a mature tree and replacing it with a number of new replacement trees. If selected, this number is determined by the Bristol Tree Replacement Standard (see below).  The interface allows the user to see the effect of changing any of a number of parameters, some of which describe the lost tree such as its diameter and lifespan, others describe the replacements. 
   In addition, the user can change the parameters of the growth model such as the rate of growth and the conversion from tree diameter to tree biomass.  Since these values are rather unknown, this allows the user to see how sensitive the prediction is to uncertainties in this model. 
   </div>
+  <div>The model is under development and we would much appreciate feedback on this work at <a href="mailto://co2@bristoltrees.space">co2@bristoltrees.space</a></div>
   <h3>Bristol Tree Replacement Standard (BTRS)</h3>
    <div>In Bristol, the number of trees planted to compensate for the loss of an existing trees depends upon the situation and the size of the lost tree.
    The <a target="_blank" class="external" href="https://bristoltreeforum.files.wordpress.com/2020/03/bristol-tree-replacement-standard-btrs.pdf">Bristol Tree Replacement Standard</a> applies to trees lost through development.  A tree covered by a TPO is replaced by a single tree but a BCC-managed tree in a street or park 
@@ -270,14 +272,14 @@ return
    <li>forrester : <a target="_blank" href="https://www.researchgate.net/publication/316555199_Generalized_biomass_and_leaf_area_allometric_equations_for_European_tree_species_incorporating_stand_structure_tree_age_and_climate">Forrester et al (2017)</a></li>
    </ul>
     </div>
-   <h3>Biomass to CO<sup>2</sup></h3>
-    <div>Carbon is assumed to account for 50% of the mass of the tree although this is an upper limit. Seqestered Carbon is typically reported in CO<sup>2</sup> equivalent. Using the atomic weights of Carbon (12) and Oxygen(16) the conversion factor from Carbon to CO<sup>2</sup> is 12+2*16 / 12 =3.67.
+   <h3>Biomass to CO<sub>2</sub></h3>
+    <div>Carbon is assumed to account for 50% of the mass of the tree although this is an upper limit. Seqestered Carbon is typically reported in CO<sub>2</sub> equivalent. Using the atomic weights of Carbon (12) and Oxygen(16) the conversion factor from Carbon to CO<sub>2</sub> is 12+2*16 / 12 =3.67.
    </div>
  
    <h3>Decay of lost tree</h3>
-   <div>The CO<sup>2</sup> released back depends on the method of disposal. To support the eco-system, it is best that the tree decays in situ although this releases the stored carbon back to the environment, albeit slowly.
+   <div>The CO<sub>2</sub> released back depends on the method of disposal. To support the eco-system, it is best that the tree decays in situ although this releases the stored carbon back to the environment, albeit slowly.
    It is assumed that the tree will decay steadily over 15 years.
-   Much better for CO<sup>2</sup> retention would be to convert the tree into timber and use for construction and furniture, although the whole tree cannot be used this way. Timber still decays however. Softwoods used for paper and cardboard will decay in a few years. If used for fencing and pallets it can be assumed to decay in 10-15 years whereas hardwoods or wood used in construction would last much longer. If the tree is chipped and used as fuel in a biomass boiler, such as powers the BCC Blaise Nursery, then the whole amount of CO<sup>2</sup> is put back into the atmosphere very quickly. Set the years to 1 to simulate this situation.
+   Much better for CO<sub>2</sub> retention would be to convert the tree into timber and use for construction and furniture, although the whole tree cannot be used this way. Timber still decays however. Softwoods used for paper and cardboard will decay in a few years. If used for fencing and pallets it can be assumed to decay in 10-15 years whereas hardwoods or wood used in construction would last much longer. If the tree is chipped and used as fuel in a biomass boiler, such as powers the BCC Blaise Nursery, then the whole amount of CO<sub>2</sub> is put back into the atmosphere very quickly. Set the years to 1 to simulate this situation.
    </div>
 <!--
 <h3>Monetary benefits</h3>
@@ -303,7 +305,7 @@ return
     </div>
    <div>See also a related project to explore the relationship between <a href="dbh-canopy-analysis.xq">DBH and canopy area</a></div>
 
-    <div>20 March 2020</div>
+    <div>31 March 2020</div>
    </div>
   </div>
     </body>
