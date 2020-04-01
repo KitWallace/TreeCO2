@@ -30,28 +30,7 @@
         <Decay>1</Decay>
         <RepRR>5.5</RepRR>
         <RepAM>50</RepAM>
-        <RepHL>200</RepHL>
-        <RepA>-2.1</RepA>
-        <RepB>2.369</RepB>
-        <AP>6</AP>
-        <PD>1</PD>
-        <EY>3</EY>
-        <BTRS/>
-    </scenario>
-    <scenario>
-        <title>Medium tree replaced by large trees</title>
-        <description/>
-        <DBH>40</DBH>
-        <RR>3.5</RR>
-        <AM>85</AM>
-        <CP>85</CP>
-        <HL>200</HL>
-        <A>-2.1</A>
-        <B>2.369</B>
-        <Decay>1</Decay>
-        <RepRR>5.5</RepRR>
-        <RepAM>200</RepAM>
-        <RepHL>400</RepHL>
+        <RepHL>80</RepHL>
         <RepA>-2.1</RepA>
         <RepB>2.369</RepB>
         <AP>6</AP>
